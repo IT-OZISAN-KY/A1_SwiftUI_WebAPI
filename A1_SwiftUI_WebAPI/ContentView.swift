@@ -85,14 +85,16 @@ struct ContentView: View {
     }
     // ひらがなをもとに漢字を取得
     private func getKanjis(hiragana: String){
-        // 取得URL
+        // 1. ひらがなをエンコード
         let urlKeyword = hiragana.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        // 2. URLを定義←エンコードしたひらがなをキーワードに設定
         let url = "https://jlp.yahooapis.jp/JIMService/V1/conversion?appid=(アプリケーションID)&sentence=\(urlKeyword ?? "")"
-
-        //Alamofireを使ってAPIリクエストを出す。
+        // 3. Alamofireで、APIをリクエスト
         AF.request(url).response { response in
+            // 3.1 SWXMLHashで、XMLを解析
             let xml = SWXMLHash.parse(response.data!)
             words = []
+            // 3.2 漢字一覧を取得して、wordsに追加
             for element in xml["ResultSet"]["Result"]["SegmentList"]["Segment"][0]["CandidateList"]["Candidate"].all {
                 words.append(element.element!.text)
             }
@@ -100,17 +102,18 @@ struct ContentView: View {
     }
     // 検索ワードをもとに画像を取得
     private func getImages(keyword: String){
-        // 取得URL
+        // 1. 検索ワードをエンコード
         let urlKeyword = keyword.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        // 2. URLを定義←エンコードした検索ワードをキーワードに設定
         let url = "https://pixabay.com/api/?key=(App Key))&q=\(urlKeyword ?? "")&lang=ja&safesearch=true"
 
         var imageDatas: [ImageData] = []    // 画像のデータ
-        //Alamofireを使ってAPIリクエストを出す。
+        // 3. Alamofireで、APIをリクエスト
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON {(response) in
             switch(response.result) {
-            //API通信成功した時
+            // 3.1. リクエスト成功の場合
             case.success:
-                //返ってきたJSONを変数に設定
+                // 3.1.1. "hits", "previewURL"の値をimageDataに追加
                 let json:JSON = JSON(response.data as Any)
                 urlImage.imageDatas = []
                 for (_, subJson) in json["hits"] {
@@ -118,14 +121,13 @@ struct ContentView: View {
                         imageDatas.append(ImageData(URL: url))
                     }
                 }
-                // 画像データを設定し、画像画面に切り替え
+                // 3.1.2. 画像データがある場合は、画像画面に切り替え
                 if imageDatas.count > 0 {
                     urlImage.setImages(imageDatas: imageDatas)
                     imageOn = true
                 }
-            //失敗した時
+            // 3.2. 失敗の場合は、メッセージ表示
             case.failure(let error):
-                //失敗したらエラー文が返ってくるのでそれを表示
                 print(error)
             }
         }
