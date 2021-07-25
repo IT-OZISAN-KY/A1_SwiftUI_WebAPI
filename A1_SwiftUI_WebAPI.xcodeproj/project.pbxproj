@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6356744DA8EAD0FCD2399015 /* Pods_A1_SwiftUI_WebAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8FFC5CC47769B0A2B01DCA7 /* Pods_A1_SwiftUI_WebAPI.framework */; };
 		AEA4617D26AD6E140010D564 /* A1_SwiftUI_WebAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4617C26AD6E140010D564 /* A1_SwiftUI_WebAPIApp.swift */; };
 		AEA4617F26AD6E140010D564 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4617E26AD6E140010D564 /* ContentView.swift */; };
 		AEA4618126AD6E160010D564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA4618026AD6E160010D564 /* Assets.xcassets */; };
 		AEA4618426AD6E160010D564 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA4618326AD6E160010D564 /* Preview Assets.xcassets */; };
+		AEA4618C26AD6E6E0010D564 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA4618B26AD6E6E0010D564 /* URLImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1373EA9DCBAC687AF5832266 /* Pods-A1_SwiftUI_WebAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A1_SwiftUI_WebAPI.release.xcconfig"; path = "Target Support Files/Pods-A1_SwiftUI_WebAPI/Pods-A1_SwiftUI_WebAPI.release.xcconfig"; sourceTree = "<group>"; };
+		2D4FA82A180D64730FD7A51B /* Pods-A1_SwiftUI_WebAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-A1_SwiftUI_WebAPI.debug.xcconfig"; path = "Target Support Files/Pods-A1_SwiftUI_WebAPI/Pods-A1_SwiftUI_WebAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		A8FFC5CC47769B0A2B01DCA7 /* Pods_A1_SwiftUI_WebAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_A1_SwiftUI_WebAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA4617926AD6E140010D564 /* A1_SwiftUI_WebAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A1_SwiftUI_WebAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA4617C26AD6E140010D564 /* A1_SwiftUI_WebAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A1_SwiftUI_WebAPIApp.swift; sourceTree = "<group>"; };
 		AEA4617E26AD6E140010D564 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AEA4618026AD6E160010D564 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEA4618326AD6E160010D564 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AEA4618526AD6E160010D564 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA4618B26AD6E6E0010D564 /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6356744DA8EAD0FCD2399015 /* Pods_A1_SwiftUI_WebAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224FCA5C0FB8E44DC7394B4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8FFC5CC47769B0A2B01DCA7 /* Pods_A1_SwiftUI_WebAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEA4617026AD6E140010D564 = {
 			isa = PBXGroup;
 			children = (
 				AEA4617B26AD6E140010D564 /* A1_SwiftUI_WebAPI */,
 				AEA4617A26AD6E140010D564 /* Products */,
+				E61CCEBC4D10FACDB699E7DB /* Pods */,
+				224FCA5C0FB8E44DC7394B4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +71,7 @@
 			children = (
 				AEA4617C26AD6E140010D564 /* A1_SwiftUI_WebAPIApp.swift */,
 				AEA4617E26AD6E140010D564 /* ContentView.swift */,
+				AEA4618B26AD6E6E0010D564 /* URLImage.swift */,
 				AEA4618026AD6E160010D564 /* Assets.xcassets */,
 				AEA4618526AD6E160010D564 /* Info.plist */,
 				AEA4618226AD6E160010D564 /* Preview Content */,
@@ -69,6 +87,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E61CCEBC4D10FACDB699E7DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D4FA82A180D64730FD7A51B /* Pods-A1_SwiftUI_WebAPI.debug.xcconfig */,
+				1373EA9DCBAC687AF5832266 /* Pods-A1_SwiftUI_WebAPI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEA4618826AD6E160010D564 /* Build configuration list for PBXNativeTarget "A1_SwiftUI_WebAPI" */;
 			buildPhases = (
+				8F97A7276411C4C1812D9641 /* [CP] Check Pods Manifest.lock */,
 				AEA4617526AD6E140010D564 /* Sources */,
 				AEA4617626AD6E140010D564 /* Frameworks */,
 				AEA4617726AD6E140010D564 /* Resources */,
+				45AFDDC262128A5BBC40EC0D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +163,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45AFDDC262128A5BBC40EC0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-A1_SwiftUI_WebAPI/Pods-A1_SwiftUI_WebAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-A1_SwiftUI_WebAPI/Pods-A1_SwiftUI_WebAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-A1_SwiftUI_WebAPI/Pods-A1_SwiftUI_WebAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F97A7276411C4C1812D9641 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-A1_SwiftUI_WebAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AEA4617526AD6E140010D564 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AEA4617F26AD6E140010D564 /* ContentView.swift in Sources */,
+				AEA4618C26AD6E6E0010D564 /* URLImage.swift in Sources */,
 				AEA4617D26AD6E140010D564 /* A1_SwiftUI_WebAPIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +337,7 @@
 		};
 		AEA4618926AD6E160010D564 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D4FA82A180D64730FD7A51B /* Pods-A1_SwiftUI_WebAPI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,6 +360,7 @@
 		};
 		AEA4618A26AD6E160010D564 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1373EA9DCBAC687AF5832266 /* Pods-A1_SwiftUI_WebAPI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
